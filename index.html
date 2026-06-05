@@ -4,182 +4,187 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>TradersYard | A New Home for ATFunded Traders – 50% Off</title>
-<meta name="description" content="ATFunded paused? Your trading doesn't have to. Join TradersYard, get 50% off your first challenge, and become one of our next 80 funded traders." />
+<meta name="description" content="ATFunded paused? Your funded future hasn't. Join TradersYard, claim 50% off your first challenge, and take one of 80 open seats." />
 <link rel="icon" href="assets/favicon.ico" />
 <meta property="og:title" content="A New Home for ATFunded Traders" />
-<meta property="og:description" content="Your prop firm paused. We've saved you a seat. 50% off your first TradersYard challenge." />
+<meta property="og:description" content="Your prop firm paused. We've opened 80 seats. 50% off your first TradersYard challenge." />
 
+<!-- Satoshi (real TY heading font) + Inter fallback -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 <style>
-  /* ===== Clash Display (brand heading font) ===== */
-  @font-face { font-family:"Clash Display"; src:url("assets/fonts/clash-display/ClashDisplay-Medium.woff2") format("woff2"); font-weight:500; font-display:swap; }
   @font-face { font-family:"Clash Display"; src:url("assets/fonts/clash-display/ClashDisplay-Semibold.woff2") format("woff2"); font-weight:600; font-display:swap; }
   @font-face { font-family:"Clash Display"; src:url("assets/fonts/clash-display/ClashDisplay-Bold.woff2") format("woff2"); font-weight:700; font-display:swap; }
 
   :root {
-    --primary:#4250EB; --primary-dark:#3340c4;
-    --dark:#0B0B0B;
-    --n900:#171717; --n800:#262626; --n600:#525252; --n500:#737373; --n400:#a3a3a3;
-    --n200:#e5e5e5; --n100:#f5f5f5; --n50:#fafafa; --white:#fff;
-    --discord:#5865F2; --youtube:#FF0000; --instagram:#E4405F; --twitter:#000;
-    --facebook:#1877F2; --linkedin:#0A66C2; --tiktok:#000;
+    --primary:#4250EB; --primary-2:#5562EC; --primary-soft:#7b86f5;
+    --black:#000; --n950:#0a0a0a; --n900:#0d0d10; --n850:#141418; --n800:#1c1c22;
+    --n700:#2a2a33; --n600:#3a3a44; --line:rgba(255,255,255,.10);
+    --text:#fff; --muted:#9b9ba8; --muted-2:#6f6f7d;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
-  body { font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--n900); background:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased; }
-  h1,h2,h3,h4 { font-family:"Clash Display",-apple-system,system-ui,sans-serif; font-weight:600; letter-spacing:-0.01em; line-height:1.1; }
+  body { font-family:"Satoshi","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--black); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3,h4 { font-family:"Satoshi","Clash Display",system-ui,sans-serif; font-weight:700; letter-spacing:-0.02em; line-height:1.05; }
   a { text-decoration:none; }
   .container { max-width:1280px; margin:0 auto; padding:0 24px; }
 
-  /* ===== Top promo banner (mirrors live site) ===== */
+  /* ===== Promo banner ===== */
   .promo-banner { background:var(--primary); color:#fff; overflow:hidden; white-space:nowrap; }
   .promo-track { display:inline-block; padding:9px 0; animation:scrollx 30s linear infinite; }
-  .promo-track span { font-size:12px; font-weight:600; letter-spacing:1px; text-transform:uppercase; margin:0 28px; }
+  .promo-track span { font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; margin:0 28px; }
   @keyframes scrollx { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-  /* ===== Header / Nav ===== */
-  header.nav { padding:12px 0; border-bottom:1px solid var(--n200); position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); }
-  .nav-row { display:flex; align-items:center; justify-content:space-between; height:60px; gap:16px; }
+  /* ===== Nav ===== */
+  header.nav { padding:14px 0; position:sticky; top:0; z-index:50; background:rgba(0,0,0,.7); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+  .nav-row { display:flex; align-items:center; justify-content:space-between; height:54px; gap:16px; }
   .nav-left { display:flex; align-items:center; gap:22px; }
-  .locale { display:flex; align-items:center; gap:6px; font-size:14px; color:var(--n600); }
+  .locale { display:flex; align-items:center; gap:6px; font-size:14px; color:var(--muted); }
   .locale img { width:18px; height:18px; border-radius:3px; }
   .nav-center { flex:1; display:flex; justify-content:center; }
-  .nav-menu { display:flex; align-items:center; gap:4px; background:var(--n100); border-radius:12px; padding:6px; }
-  .nav-menu a { font-size:14px; font-weight:500; color:var(--n600); padding:8px 14px; border-radius:8px; transition:all .2s; }
-  .nav-menu a:hover, .nav-menu a.active { background:#fff; color:var(--primary); box-shadow:0 1px 3px rgba(0,0,0,0.06); }
+  .nav-menu { display:flex; align-items:center; gap:4px; background:rgba(66,80,235,.14); border-radius:14px; padding:6px; }
+  .nav-menu a { font-size:14px; font-weight:500; color:#c7c7d2; padding:9px 15px; border-radius:10px; transition:all .2s; }
+  .nav-menu a:hover { background:rgba(255,255,255,.06); color:#fff; }
   .nav-right { display:flex; align-items:center; gap:14px; }
-  .btn-dark { background:var(--dark); color:#fff; font-weight:600; font-size:14px; padding:10px 22px; border-radius:10px; transition:transform .15s,opacity .2s; }
-  .btn-dark:hover { transform:translateY(-1px); opacity:.92; }
-  .nav-toggle { display:none; }
+  .btn-nav { background:var(--n800); border:1px solid var(--n700); color:#fff; font-weight:600; font-size:14px; padding:10px 22px; border-radius:11px; transition:background .2s; }
+  .btn-nav:hover { background:var(--n700); }
   @media (max-width:1024px){ .nav-center{display:none} .locale{display:none} }
 
-  /* ===== Buttons ===== */
-  .btn-primary { display:inline-block; background:var(--primary); color:#fff; font-weight:600; font-size:16px; padding:15px 32px; border-radius:12px; box-shadow:0 14px 34px -12px rgba(66,80,235,.6); transition:background .2s,transform .15s,box-shadow .15s; }
-  .btn-primary:hover { background:var(--primary-dark); transform:translateY(-2px); box-shadow:0 18px 40px -12px rgba(66,80,235,.7); }
-  .btn-ghost { display:inline-block; background:var(--n100); color:var(--n900); font-weight:600; font-size:16px; padding:15px 30px; border-radius:12px; transition:background .2s; }
-  .btn-ghost:hover { background:var(--n200); }
+  /* ===== Buttons (TY style: text slides, arrow reveals) ===== */
+  .btn { display:inline-flex; align-items:center; gap:8px; font-family:"Satoshi","Clash Display",sans-serif; font-weight:500; font-size:17px; padding:15px 30px; border-radius:14px; border:1px solid transparent; transition:all .3s; cursor:pointer; }
+  .btn-primary { background:var(--primary); color:#fff; border-color:var(--primary); }
+  .btn-primary:hover { background:rgba(66,80,235,.78); }
+  .btn-dark { background:var(--n850); color:#fff; border-color:var(--n700); }
+  .btn-dark:hover { background:var(--n800); }
+  .btn .arrow { transition:transform .3s; }
+  .btn:hover .arrow { transform:translateX(3px); }
 
   /* ===== Hero ===== */
-  .hero { position:relative; overflow:hidden; padding:88px 0 76px; text-align:center; }
-  .hero::before { content:''; position:absolute; inset:0; z-index:-1;
-    background: radial-gradient(60% 55% at 50% 0%, rgba(66,80,235,.10), transparent 70%); }
-  .chip { display:inline-flex; align-items:center; gap:8px; background:rgba(66,80,235,.08); color:var(--primary); padding:7px 16px; border-radius:999px; font-size:12px; font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-bottom:22px; }
-  .chip .dot { width:7px; height:7px; border-radius:50%; background:var(--primary); }
-  .hero h1 { font-size:clamp(36px,5.4vw,62px); font-weight:700; max-width:880px; margin:0 auto 20px; }
-  .hero h1 .accent { color:var(--primary); }
-  .hero p.lead { font-size:clamp(17px,2vw,21px); color:var(--n600); max-width:640px; margin:0 auto 32px; }
+  .hero { position:relative; overflow:hidden; padding:80px 0 64px; }
+  .hero-inner { position:relative; background:linear-gradient(to bottom, transparent, var(--n900)); border-radius:48px; padding:72px 32px; text-align:center; overflow:hidden; }
+  .hero-inner::before { content:''; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(50% 60% at 50% 0%, rgba(66,80,235,.30), transparent 70%); }
+  .hero-inner > * { position:relative; z-index:1; }
+  .chip { display:inline-flex; align-items:center; gap:8px; background:var(--primary); color:#fff; padding:7px 18px; border-radius:999px; font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-bottom:26px; transition:transform .3s; }
+  .chip:hover { transform:scale(1.05); }
+  .hero h1 { font-size:clamp(40px,6vw,76px); font-weight:900; max-width:900px; margin:0 auto 22px; }
+  .hero h1 .accent { color:var(--primary-soft); }
+  .hero p.lead { font-size:clamp(18px,2vw,22px); color:var(--muted); font-weight:500; max-width:660px; margin:0 auto 36px; }
   .hero-cta { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-  .hero-note { display:block; margin-top:18px; font-size:14px; color:var(--n500); }
-
-  /* ===== Counter band (the 80 funded goal) ===== */
-  .counter { background:var(--dark); color:#fff; }
-  .counter .container { display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center; padding:56px 24px; }
-  .counter h2 { color:#fff; font-size:clamp(26px,3.4vw,38px); margin-bottom:12px; }
-  .counter h2 .accent { color:#8b97f5; }
-  .counter p { color:rgba(255,255,255,.7); font-size:17px; max-width:460px; }
-  .seats-panel { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:30px 32px; }
-  .seats-big { font-family:"Clash Display",sans-serif; font-size:66px; font-weight:700; color:#fff; line-height:1; }
-  .seats-label { font-size:15px; color:rgba(255,255,255,.6); text-transform:uppercase; letter-spacing:1px; margin-top:4px; }
-  .seats-list { list-style:none; margin-top:22px; padding-top:22px; border-top:1px solid rgba(255,255,255,.12); display:flex; flex-direction:column; gap:12px; }
-  .seats-list li { position:relative; padding-left:26px; font-size:15px; color:rgba(255,255,255,.85); }
-  .seats-list li::before { content:''; position:absolute; left:0; top:7px; width:16px; height:16px; border-radius:50%; background:var(--primary); box-shadow:0 0 0 4px rgba(66,80,235,.2); }
-  .seats-list li::after { content:''; position:absolute; left:5px; top:11px; width:5px; height:3px; border-left:2px solid #fff; border-bottom:2px solid #fff; transform:rotate(-45deg); }
-  @media (max-width:760px){ .counter .container{grid-template-columns:1fr} }
+  .hero-note { display:block; margin-top:20px; font-size:14px; color:var(--muted-2); }
 
   /* ===== Stat strip ===== */
-  .strip { border-top:1px solid var(--n200); border-bottom:1px solid var(--n200); background:var(--n50); }
+  .strip { border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
   .strip .container { display:grid; grid-template-columns:repeat(3,1fr); }
-  .strip-item { padding:30px 20px; text-align:center; border-right:1px solid var(--n200); }
+  .strip-item { padding:34px 20px; text-align:center; border-right:1px solid var(--line); }
   .strip-item:last-child { border-right:none; }
-  .strip-item .num { font-family:"Clash Display",sans-serif; font-size:30px; font-weight:700; color:var(--primary); }
-  .strip-item .lbl { font-size:14px; color:var(--n600); margin-top:2px; }
-  @media (max-width:760px){ .strip .container{grid-template-columns:1fr} .strip-item{border-right:none;border-bottom:1px solid var(--n200)} .strip-item:last-child{border-bottom:none} }
+  .strip-item .num { font-family:"Satoshi",sans-serif; font-size:32px; font-weight:900; color:#fff; }
+  .strip-item .lbl { font-size:14px; color:var(--muted); margin-top:4px; }
+  @media (max-width:760px){ .strip .container{grid-template-columns:1fr} .strip-item{border-right:none;border-bottom:1px solid var(--line)} .strip-item:last-child{border-bottom:none} }
 
   /* ===== Sections ===== */
-  section.block { padding:80px 0; }
+  section.block { padding:84px 0; }
   .center { text-align:center; }
-  .eyebrow { color:var(--primary); font-weight:600; font-size:12px; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px; }
-  h2.title { font-size:clamp(28px,3.6vw,44px); font-weight:600; margin-bottom:14px; }
-  h2.title .accent { color:var(--primary); }
-  .sub { color:var(--n600); font-size:18px; max-width:600px; margin:0 auto 48px; }
+  .eyebrow { color:var(--primary-soft); font-weight:700; font-size:12px; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px; }
+  h2.title { font-size:clamp(30px,4vw,48px); font-weight:900; margin-bottom:14px; }
+  h2.title .accent { color:var(--primary-soft); }
+  .sub { color:var(--muted); font-size:18px; max-width:600px; margin:0 auto 52px; }
 
-  /* ===== Why cards ===== */
-  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-  .card { background:#fff; border:1px solid var(--n200); border-radius:20px; padding:32px 28px; text-align:left; }
-  .card .ic { width:48px; height:48px; border-radius:14px; background:rgba(66,80,235,.10); color:var(--primary); display:grid; place-items:center; margin-bottom:18px; }
+  /* ===== Big blue feature panel (the "Build Your Yard" treatment) ===== */
+  .blue-panel { background:linear-gradient(160deg, var(--primary) 0%, #3340c4 100%); border-radius:36px; padding:60px 48px; position:relative; overflow:hidden; }
+  .blue-panel::after { content:''; position:absolute; bottom:-120px; right:-80px; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,.16), transparent 70%); }
+  .blue-panel .bp-inner { position:relative; z-index:1; display:grid; grid-template-columns:1.1fr 1fr; gap:48px; align-items:center; }
+  .blue-panel .eyebrow { color:rgba(255,255,255,.8); }
+  .blue-panel h2 { color:#fff; font-size:clamp(28px,3.6vw,42px); margin-bottom:14px; }
+  .blue-panel p { color:rgba(255,255,255,.86); font-size:17px; max-width:460px; }
+  .seats-card { background:rgba(0,0,0,.22); border:1px solid rgba(255,255,255,.18); border-radius:24px; padding:34px; backdrop-filter:blur(4px); }
+  .seats-big { font-family:"Satoshi",sans-serif; font-size:72px; font-weight:900; color:#fff; line-height:1; }
+  .seats-label { font-size:14px; color:rgba(255,255,255,.7); text-transform:uppercase; letter-spacing:1px; margin-top:4px; }
+  .seats-list { list-style:none; margin-top:24px; padding-top:24px; border-top:1px solid rgba(255,255,255,.18); display:flex; flex-direction:column; gap:13px; }
+  .seats-list li { position:relative; padding-left:28px; font-size:15px; color:#fff; }
+  .seats-list li::before { content:'✓'; position:absolute; left:0; top:0; width:18px; height:18px; border-radius:50%; background:#fff; color:var(--primary); font-size:11px; font-weight:900; display:grid; place-items:center; }
+  @media (max-width:820px){ .blue-panel .bp-inner{grid-template-columns:1fr} .blue-panel{padding:44px 28px} }
+
+  /* ===== Dark feature cards ===== */
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .card { background:var(--n900); border:1px solid var(--line); border-radius:24px; padding:34px 30px; text-align:left; transition:border-color .25s, transform .25s; }
+  .card:hover { border-color:rgba(66,80,235,.5); transform:translateY(-3px); }
+  .card .ic { width:50px; height:50px; border-radius:15px; background:rgba(66,80,235,.16); color:var(--primary-soft); display:grid; place-items:center; margin-bottom:20px; }
   .card .ic svg { width:24px; height:24px; }
-  .card h3 { font-size:20px; margin-bottom:8px; }
-  .card p { color:var(--n600); font-size:15px; }
+  .card h3 { font-size:21px; margin-bottom:10px; color:#fff; }
+  .card p { color:var(--muted); font-size:15px; }
   @media (max-width:860px){ .grid3{grid-template-columns:1fr} }
 
   /* ===== Steps ===== */
-  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-  .step { background:var(--n50); border:1px solid var(--n200); border-radius:18px; padding:30px 26px; }
-  .step .n { width:42px; height:42px; border-radius:12px; background:var(--primary); color:#fff; font-family:"Clash Display",sans-serif; font-weight:700; font-size:18px; display:grid; place-items:center; margin-bottom:18px; }
-  .step h3 { font-size:19px; margin-bottom:8px; }
-  .step p { color:var(--n600); font-size:15px; }
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .step { background:var(--n900); border:1px solid var(--line); border-radius:22px; padding:32px 28px; }
+  .step .n { width:44px; height:44px; border-radius:13px; background:var(--primary); color:#fff; font-family:"Satoshi",sans-serif; font-weight:900; font-size:18px; display:grid; place-items:center; margin-bottom:20px; }
+  .step h3 { font-size:20px; margin-bottom:8px; color:#fff; }
+  .step p { color:var(--muted); font-size:15px; }
   @media (max-width:860px){ .steps{grid-template-columns:1fr} }
 
-  /* ===== Claim card ===== */
-  .claim { background:var(--dark); color:#fff; border-radius:28px; padding:56px 44px; text-align:center; position:relative; overflow:hidden; box-shadow:0 30px 70px -30px rgba(11,11,11,.6); }
-  .claim::after { content:''; position:absolute; top:-90px; right:-90px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle,rgba(66,80,235,.45),transparent 70%); }
-  .claim .eyebrow { color:#8b97f5; position:relative; }
-  .claim h2 { color:#fff; font-size:clamp(28px,3.6vw,42px); margin-bottom:14px; position:relative; }
-  .claim p { color:rgba(255,255,255,.78); font-size:18px; max-width:540px; margin:0 auto 30px; position:relative; }
-  .claim .btn-primary { position:relative; }
-  .claim .reqs { margin-top:22px; font-size:14px; color:rgba(255,255,255,.6); position:relative; }
+  /* ===== Bright CTA band ===== */
+  .cta-band { background:linear-gradient(160deg, var(--primary) 0%, #3340c4 100%); border-radius:36px; padding:64px 44px; text-align:center; position:relative; overflow:hidden; }
+  .cta-band::before { content:''; position:absolute; top:-100px; left:-60px; width:300px; height:300px; border-radius:50%; background:radial-gradient(circle, rgba(255,255,255,.16), transparent 70%); }
+  .cta-band::after { content:''; position:absolute; bottom:-120px; right:-60px; width:340px; height:340px; border-radius:50%; background:radial-gradient(circle, rgba(0,0,0,.18), transparent 70%); }
+  .cta-band > * { position:relative; z-index:1; }
+  .cta-band .eyebrow { color:rgba(255,255,255,.8); }
+  .cta-band h2 { color:#fff; font-size:clamp(30px,4vw,46px); font-weight:900; margin-bottom:14px; }
+  .cta-band p { color:rgba(255,255,255,.86); font-size:18px; max-width:540px; margin:0 auto 32px; }
+  .cta-band .btn-white { background:#fff; color:var(--primary); border-color:#fff; }
+  .cta-band .btn-white:hover { background:rgba(255,255,255,.88); }
+  .cta-band .reqs { margin-top:22px; font-size:14px; color:rgba(255,255,255,.72); }
 
   /* ===== FAQ accordion ===== */
   .faq { max-width:760px; margin:0 auto; }
-  .faq-item { border:1px solid var(--n200); border-radius:14px; margin-bottom:12px; overflow:hidden; transition:border-color .2s, box-shadow .2s; }
-  .faq-item[open] { border-color:var(--primary); box-shadow:0 8px 24px -14px rgba(66,80,235,.4); }
-  .faq-item summary { list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 24px; font-family:"Clash Display",sans-serif; font-weight:500; font-size:18px; color:var(--n900); }
+  .faq-item { background:var(--n900); border:1px solid var(--line); border-radius:16px; margin-bottom:12px; overflow:hidden; transition:border-color .2s; }
+  .faq-item[open] { border-color:rgba(66,80,235,.6); }
+  .faq-item summary { list-style:none; cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:22px 26px; font-family:"Satoshi",sans-serif; font-weight:700; font-size:18px; color:#fff; }
   .faq-item summary::-webkit-details-marker { display:none; }
-  .faq-item summary .plus { flex-shrink:0; width:24px; height:24px; position:relative; transition:transform .25s; }
-  .faq-item summary .plus::before, .faq-item summary .plus::after { content:''; position:absolute; background:var(--primary); border-radius:2px; }
+  .faq-item summary .plus { flex-shrink:0; width:24px; height:24px; position:relative; }
+  .faq-item summary .plus::before, .faq-item summary .plus::after { content:''; position:absolute; background:var(--primary-soft); border-radius:2px; }
   .faq-item summary .plus::before { top:11px; left:3px; width:18px; height:2px; }
   .faq-item summary .plus::after { left:11px; top:3px; width:2px; height:18px; transition:transform .25s, opacity .25s; }
   .faq-item[open] summary .plus::after { transform:rotate(90deg); opacity:0; }
-  .faq-item .faq-body { padding:0 24px 22px; }
-  .faq-item .faq-body p { color:var(--n600); }
+  .faq-item .faq-body { padding:0 26px 22px; }
+  .faq-item .faq-body p { color:var(--muted); }
 
-  /* ===== Footer (mirrors TY Footer.vue) ===== */
-  footer.site { background:var(--n100); margin:0 12px; border-radius:24px 24px 0 0; }
+  /* ===== Footer ===== */
+  footer.site { background:var(--n900); margin:0 12px; border-radius:28px 28px 0 0; border:1px solid var(--line); border-bottom:none; }
   footer.site .container { padding:64px 24px 48px; }
-  .foot-top { display:flex; flex-direction:column; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--n200); }
+  .foot-top { display:flex; flex-direction:column; gap:40px; padding-bottom:40px; border-bottom:1px solid var(--line); }
   @media (min-width:1100px){ .foot-top{flex-direction:row; justify-content:space-between} }
   .foot-brand { display:flex; flex-direction:column; gap:28px; }
   .app-btns { display:flex; gap:10px; flex-wrap:wrap; }
-  .app-btn { display:flex; align-items:center; gap:10px; background:#fff; border-radius:12px; padding:10px 16px; transition:transform .2s,box-shadow .2s; }
-  .app-btn:hover { transform:scale(1.04); box-shadow:0 8px 20px rgba(0,0,0,.08); }
-  .app-btn .ico { width:28px; height:28px; color:var(--n900); }
-  .app-btn .lbl { font-size:11px; color:var(--n600); line-height:1.1; }
-  .app-btn .plat { font-size:16px; font-weight:600; color:var(--n900); }
+  .app-btn { display:flex; align-items:center; gap:10px; background:var(--n850); border:1px solid var(--n700); border-radius:13px; padding:10px 16px; transition:transform .2s; }
+  .app-btn:hover { transform:scale(1.04); }
+  .app-btn .ico { width:28px; height:28px; color:#fff; }
+  .app-btn .lbl { font-size:11px; color:var(--muted); line-height:1.1; }
+  .app-btn .plat { font-size:16px; font-weight:700; color:#fff; }
   .socials { display:flex; gap:20px; }
   .socials a { transition:transform .2s; }
   .socials a:hover { transform:scale(1.12); }
   .socials svg { width:24px; height:24px; }
   .foot-cols { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
-  .foot-cols h4 { font-family:"Clash Display",sans-serif; font-weight:500; font-size:15px; color:var(--n900); margin-bottom:8px; }
-  .foot-cols ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
-  .foot-cols a { font-size:14px; color:var(--n600); transition:color .2s; }
-  .foot-cols a:hover { color:var(--primary); }
+  .foot-cols h4 { font-family:"Satoshi",sans-serif; font-weight:700; font-size:15px; color:#fff; margin-bottom:10px; }
+  .foot-cols ul { list-style:none; display:flex; flex-direction:column; gap:9px; }
+  .foot-cols a { font-size:14px; color:var(--muted); transition:color .2s; }
+  .foot-cols a:hover { color:var(--primary-soft); }
   @media (max-width:760px){ .foot-cols{grid-template-columns:1fr} }
   .disclaimers { padding:36px 0; display:flex; flex-direction:column; gap:18px; }
-  .disclaimers h5 { font-size:12px; font-weight:700; color:var(--n600); margin-bottom:3px; }
-  .disclaimers p { font-size:11px; color:var(--n500); line-height:1.6; }
-  .copyright { padding-top:28px; border-top:1px solid var(--n200); text-align:center; font-size:13px; color:var(--n400); }
+  .disclaimers h5 { font-size:12px; font-weight:700; color:var(--muted); margin-bottom:3px; }
+  .disclaimers p { font-size:11px; color:var(--muted-2); line-height:1.6; }
+  .copyright { padding-top:28px; border-top:1px solid var(--line); text-align:center; font-size:13px; color:var(--muted-2); }
 
-  /* TY logo paths */
-  .ty-logo path { fill:var(--primary); }
+  .ty-logo { display:block; height:24px; width:auto; }
 </style>
 </head>
 <body>
 
-<!-- ===== Promo banner ===== -->
+<!-- Promo banner -->
 <div class="promo-banner">
   <div class="promo-track">
     <span>ATFUNDED TRADERS · 50% OFF · USE CODE ATFWELCOME</span>
@@ -191,24 +196,12 @@
   </div>
 </div>
 
-<!-- ===== Navigation ===== -->
+<!-- Nav -->
 <header class="nav">
   <div class="container nav-row">
     <div class="nav-left">
       <a href="https://tradersyard.com" aria-label="TradersYard">
-        <svg class="ty-logo" width="128" height="24" viewBox="0 0 132 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M42.2081 2.94288C43.4382 2.96398 44.6685 2.96045 45.8985 2.93227C45.9399 4.52848 45.9035 6.28824 45.9037 7.89487L45.9089 17.6072L42.1911 17.6032C42.1998 16.6953 42.1796 15.9738 42.3289 15.074C41.0821 17.1779 39.8258 18.0161 37.303 17.6424C35.807 17.3076 34.8968 16.6478 34.3329 15.7236C32.9255 13.4516 33.0276 8.43851 35.551 6.96163C36.9058 6.16873 39.0971 6.04147 40.5171 6.76162C41.4191 7.21909 41.8828 7.98099 42.3834 8.80051C42.1438 6.96869 42.1903 4.81111 42.2081 2.94288Z"/>
-          <path d="M52.1858 6.33187C54.1878 6.04371 56.9486 6.63289 58.1026 8.41425C59.0407 9.86236 59.0709 11.2498 59.0247 12.8905C56.2912 12.8441 53.4216 12.8846 50.6775 12.8964C50.7336 13.0788 50.8477 13.5161 50.9333 13.6667C52.0339 15.6028 54.1582 15.3899 55.1978 13.6347C56.1777 13.6676 57.2321 13.6492 58.2175 13.6492L58.8863 13.6314C58.696 14.4456 58.4845 15.1303 57.9391 15.7934C56.0335 18.1101 51.137 18.1453 48.9028 16.3539C47.4556 15.1778 46.9112 13.1861 47.0423 11.3831C47.2828 8.07393 49.0108 6.63476 52.1858 6.33187Z"/>
-          <path d="M22.8123 6.43368L26.6484 6.43057C28.1151 6.4304 29.6045 6.50147 30.7172 7.62027C31.1285 8.04056 31.4235 8.56075 31.5731 9.12969C31.8233 10.0713 31.7228 13.5321 31.7176 14.6903L32.6414 14.6756C32.6526 15.6527 32.6531 16.63 32.6429 17.6072C29.7363 17.6028 28.6281 18.1797 28.4837 14.7909C28.1288 15.6999 27.9554 16.1669 27.2877 16.8889C25.8922 18.1104 23.2195 18.1218 21.8294 16.8889C20.5447 15.7494 20.6817 12.8458 21.8593 11.6643C23.2698 10.249 26.3874 10.6573 28.3184 10.6185C28.2012 10.2944 27.9674 9.60745 27.5449 9.5781C25.9973 9.47056 24.3735 9.51386 22.8169 9.55362L22.8123 6.43368Z"/>
-          <path d="M74.3965 6.26886C75.5696 6.08959 78.0336 6.38015 78.9841 7.10581C80.0204 7.89691 80.279 8.57213 80.5104 9.77209C79.5061 9.86903 78.5006 9.9531 77.494 10.0243C77.2493 9.67274 77.1277 9.45993 76.7126 9.30052C75.9074 8.99129 73.318 8.8514 72.9461 9.79202C73.0293 10.4993 74.5835 10.5778 75.1683 10.6224C77.3423 10.7883 80.5783 11.2741 80.6679 14.0754C80.764 17.0848 77.6033 17.6894 75.2009 17.742C74.0287 17.8296 72.125 17.581 71.1523 16.9545C70.0231 16.2272 69.6532 15.3853 69.3486 14.1444C70.3197 13.9296 71.448 13.7632 72.4514 13.5602C73.0411 14.8403 73.9569 14.918 75.2586 14.9181C75.8048 14.9181 77.3163 14.8639 77.2975 14.0473C76.7884 12.5796 69.6436 13.8695 69.5966 10.2233C69.5576 7.18983 71.8591 6.46941 74.3965 6.26886Z"/>
-          <path d="M7.96558 2.97509C8.04635 2.9555 8.74814 2.93648 8.87742 2.93167C8.885 4.15791 8.84977 5.37119 8.88928 6.60073C9.8095 6.62641 10.8019 6.59324 11.7269 6.57406C11.7263 7.55862 11.714 8.56035 11.7671 9.54222C10.4056 9.52544 7.68236 9.22164 6.65553 10.1763C5.78314 10.9873 5.85855 13.0622 6.69398 13.9007C7.74299 14.9535 10.1668 14.635 11.5784 14.6475C11.6308 15.4449 11.594 16.7938 11.5934 17.6395C10.9722 17.5846 10.1474 17.6032 9.50724 17.6023C8.32861 17.6042 7.44842 17.6652 6.20687 17.4332C2.71937 16.7815 1.29416 11.7956 4.40273 9.80232C4.59879 9.67661 4.93041 9.63199 5.18559 9.47872C5.02209 9.36452 4.55462 9.52579 4.29986 9.52748C3.71385 9.53138 3.12191 9.53965 2.53616 9.55377L2.53418 6.59925C3.49343 6.59368 4.45271 6.60111 5.41175 6.62158C5.39201 4.54631 5.52857 3.23831 7.96558 2.97509Z"/>
-          <path d="M20.9415 6.28922C21.0464 6.45784 20.9784 9.16857 20.9734 9.59586C17.0947 9.54421 17.0504 10.7229 17.0618 14.0166C17.07 15.2143 17.0682 16.4119 17.0562 17.6094C15.8185 17.6011 14.5808 17.6003 13.3433 17.6072L13.3449 14.7258L13.3359 6.59176C14.44 6.60288 15.5442 6.60341 16.6483 6.59335C16.749 7.58798 16.6844 8.66281 16.838 9.67259C17.4965 6.72911 17.8418 6.27704 20.9415 6.28922Z"/>
-          <path d="M66.889 6.32994C67.2955 6.27634 67.9121 6.28806 68.3289 6.29741C68.3222 7.39571 68.3274 8.49406 68.3445 9.59224C67.0394 9.55732 64.7995 9.68997 64.5314 11.3719C64.2616 13.0645 64.3471 15.8954 64.2855 17.6094C63.1008 17.5775 61.7948 17.6051 60.6011 17.6061L60.5961 16.2096L60.5941 6.59552C61.1419 6.60069 63.4111 6.49526 63.7423 6.68665C63.8259 6.7726 63.9171 6.90146 63.9243 7.01981C63.9789 7.92809 63.9851 8.86035 64.0664 9.76759C64.6189 7.90398 64.34 6.62026 66.889 6.32994Z"/>
-          <path d="M122.531 2.94128C123.761 2.96239 124.991 2.95885 126.221 2.93067C126.263 4.52688 126.226 6.28664 126.226 7.89327L126.232 17.6056L122.514 17.6016C122.523 16.6937 122.502 15.9722 122.652 15.0724C121.405 17.1763 120.149 18.0145 117.626 17.6408C116.13 17.306 115.22 16.6462 114.656 15.722C113.248 13.45 113.35 8.4369 115.874 6.96002C117.229 6.16712 119.42 6.03986 120.84 6.76001C121.742 7.21748 122.206 7.97938 122.706 8.7989C122.467 6.96708 122.513 4.80951 122.531 2.94128Z"/>
-          <path d="M90.5077 6.60429C91.4688 6.52408 93.2701 6.6206 94.3818 6.58895C93.3589 10.1874 92.1914 14.0536 91.0738 17.6175C90.7578 17.5999 90.1715 17.5533 89.8807 17.6512L90.0646 17.7402C91.8419 18.1326 92.1223 20.4301 90.9639 21.5918C89.7489 22.8104 87.9003 22.6386 86.3137 22.6342L83.5944 22.6343L83.5908 19.6039C84.4454 19.6226 88.4691 19.844 88.8397 19.1763C89.9713 17.1379 85.7635 17.6126 84.9123 17.6199C83.8264 14.0396 82.8133 10.2114 81.7939 6.59563C82.6165 6.61034 83.4393 6.61036 84.262 6.5957C84.7227 6.59456 85.1836 6.59677 85.6445 6.6023C85.9463 7.49892 86.1808 8.54708 86.4323 9.46599C86.9075 11.202 87.3774 12.9496 87.7872 14.7016C87.8652 15.0344 87.8202 15.452 87.9816 15.7586C88.2506 15.2668 88.2519 14.4784 88.3956 13.9675L90.5077 6.60429Z"/>
-          <path d="M96.1938 6.43256L99.1349 6.43181C100.863 6.43093 102.685 6.28161 104.058 7.59167C105.272 8.74991 105.126 10.5146 105.12 12.0753C105.114 12.9462 105.116 13.8172 105.127 14.6879L106.025 14.6859L106.029 17.6061C103.188 17.5757 101.852 18.2162 101.885 14.6999C101.505 15.6679 101.309 16.23 100.553 16.9745C98.8691 18.3412 94.9085 18.1203 94.4388 15.5407C93.7658 11.8449 95.7311 10.3819 99.2242 10.6365C99.6755 10.6694 101.14 10.6747 101.553 10.5781L101.583 10.4748C101.315 9.22047 100.36 9.5303 99.3479 9.53278C98.2902 9.52751 97.2326 9.53089 96.1751 9.54293C96.1719 8.5061 96.1782 7.46927 96.1938 6.43256Z"/>
-          <path d="M113.415 6.33036C113.916 6.28212 114.355 6.28804 114.855 6.29002C114.86 7.39117 114.858 8.49234 114.851 9.59347C112.854 9.58601 111.002 9.76239 110.947 12.2312C110.907 14.0157 111.004 15.8303 110.941 17.6095C109.756 17.5775 108.45 17.6051 107.256 17.6061L107.251 16.2096L107.249 6.59552C107.797 6.60069 110.066 6.49526 110.397 6.68665C110.481 6.7726 110.572 6.90146 110.579 7.01981C110.634 7.92809 110.64 8.86035 110.721 9.76759C111.274 7.90398 110.995 6.62026 113.415 6.33036Z"/>
-        </svg>
+        <img class="ty-logo" src="assets/ty-logo-white.svg" alt="TradersYard" width="132" height="24" />
       </a>
       <div class="locale"><img src="https://tradersyard.com/landing/flags/en.svg" alt="en" /> English</div>
     </div>
@@ -223,46 +216,28 @@
       </nav>
     </div>
     <div class="nav-right">
-      <a href="https://tradersyard.com/auth/login" class="btn-dark">Sign In</a>
+      <a href="https://tradersyard.com/auth/login" class="btn-nav">Sign In</a>
     </div>
   </div>
 </header>
 
-<!-- ===== Hero ===== -->
+<!-- Hero -->
 <section class="hero">
   <div class="container">
-    <div class="chip"><span class="dot"></span> A new home for ATFunded traders</div>
-    <h1>Your prop firm paused.<br /><span class="accent">Your funded future hasn't.</span></h1>
-    <p class="lead">ATFunded put their doors on hold. We're holding 80 funded seats open for their traders. Bring proof of your account, take 50% off your first challenge, and pick up exactly where you left off.</p>
-    <div class="hero-cta">
-      <a href="#claim" class="btn-primary">Claim your 50% off</a>
-      <a href="https://discord.gg/2j2zYnTHYp" target="_blank" rel="noopener" class="btn-ghost">Join our Discord</a>
-    </div>
-    <span class="hero-note">One claim per trader. Proof of your ATFunded account required.</span>
-  </div>
-</section>
-
-<!-- ===== 80 seats offer panel ===== -->
-<section class="counter">
-  <div class="container">
-    <div>
-      <div class="eyebrow" style="color:#8b97f5;">The offer</div>
-      <h2>We've opened <span class="accent">80 seats</span> for ATFunded traders</h2>
-      <p>Half-price entry, real simulated capital up to $300,000, and rewards paid on demand. This is a limited release for displaced ATFunded traders, claimed once each, while seats last.</p>
-    </div>
-    <div class="seats-panel">
-      <div class="seats-big">80</div>
-      <div class="seats-label">half-price seats</div>
-      <ul class="seats-list">
-        <li>50% off your first challenge</li>
-        <li>Up to $300,000 simulated capital</li>
-        <li>One claim per verified trader</li>
-      </ul>
+    <div class="hero-inner">
+      <div class="chip">A new home for ATFunded traders</div>
+      <h1>Your prop firm paused.<br /><span class="accent">Your funded future hasn't.</span></h1>
+      <p class="lead">ATFunded put their doors on hold. We've opened 80 seats for their traders. Bring proof of your account, take 50% off your first challenge, and pick up exactly where you left off.</p>
+      <div class="hero-cta">
+        <a href="#claim" class="btn btn-primary">Claim your 50% off <span class="arrow">→</span></a>
+        <a href="https://discord.gg/2j2zYnTHYp" target="_blank" rel="noopener" class="btn btn-dark">Join our Discord</a>
+      </div>
+      <span class="hero-note">One claim per trader. Proof of your ATFunded account required.</span>
     </div>
   </div>
 </section>
 
-<!-- ===== Stat strip (real TY numbers) ===== -->
+<!-- Stat strip -->
 <div class="strip">
   <div class="container">
     <div class="strip-item"><div class="num">25K+</div><div class="lbl">Traders trust us</div></div>
@@ -271,8 +246,32 @@
   </div>
 </div>
 
-<!-- ===== Why switch ===== -->
+<!-- Big blue 80-seats panel -->
 <section class="block">
+  <div class="container">
+    <div class="blue-panel">
+      <div class="bp-inner">
+        <div>
+          <div class="eyebrow">The offer</div>
+          <h2>We've opened 80 seats for ATFunded traders</h2>
+          <p>Half-price entry, real simulated capital up to $300,000, and rewards paid on demand. A limited release for displaced ATFunded traders, claimed once each, while seats last.</p>
+        </div>
+        <div class="seats-card">
+          <div class="seats-big">80</div>
+          <div class="seats-label">half-price seats</div>
+          <ul class="seats-list">
+            <li>50% off your first challenge</li>
+            <li>Up to $300,000 simulated capital</li>
+            <li>One claim per verified trader</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why switch -->
+<section class="block" style="padding-top:0;">
   <div class="container">
     <div class="center">
       <div class="eyebrow">Why TradersYard</div>
@@ -283,12 +282,12 @@
       <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
         <h3>Rewards on demand</h3>
-        <p>Withdraw on your schedule. Average reward time is 8 hours, and if a payout takes over 48 business hours, you get an extra 1% of your pool, up to $500.</p>
+        <p>Withdraw on your schedule. If a payout takes over 48 business hours, you get an extra 1% of your pool, up to $500.</p>
       </div>
       <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
         <h3>Up to 100% reward split</h3>
-        <p>Our scalable system keeps more in your pocket on every withdrawal. No other FX firm rewards smart, regular withdrawals the way we do.</p>
+        <p>Our scalable system keeps more in your pocket on every withdrawal. No other FX firm rewards smart withdrawals the way we do.</p>
       </div>
       <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></div>
@@ -299,7 +298,7 @@
   </div>
 </section>
 
-<!-- ===== How it works ===== -->
+<!-- How it works -->
 <section class="block" style="padding-top:0;">
   <div class="container">
     <div class="center">
@@ -315,62 +314,44 @@
   </div>
 </section>
 
-<!-- ===== Claim ===== -->
+<!-- CTA band -->
 <section class="block" id="claim" style="padding-top:0;">
   <div class="container">
-    <div class="claim">
+    <div class="cta-band">
       <div class="eyebrow">Limited window · 80 seats</div>
       <h2>Claim your seat at the Yard</h2>
       <p>Verify your ATFunded account and we'll send your single-use 50% off code by email. Your funded future starts here.</p>
       <!-- SWAP href WITH YOUR GOOGLE FORM LINK -->
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSey-IC1DxHvMBFNQDumch-uiNWPK_PYeG8ND9wcKwvOpMIhCw/viewform" target="_blank" rel="noopener" class="btn-primary">Verify and claim my code</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSey-IC1DxHvMBFNQDumch-uiNWPK_PYeG8ND9wcKwvOpMIhCw/viewform" target="_blank" rel="noopener" class="btn btn-white">Verify and claim my code <span class="arrow">→</span></a>
       <div class="reqs">You'll need: your name, email, and proof of your ATFunded account.</div>
     </div>
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
+<!-- FAQ -->
 <section class="block" style="padding-top:0;">
   <div class="container">
     <div class="center">
       <div class="eyebrow">Good to know</div>
       <h2 class="title">Frequently asked <span class="accent">questions</span></h2>
     </div>
-    <div class="faq" style="margin-top:36px;">
-      <details class="faq-item">
-        <summary>Who qualifies?<span class="plus"></span></summary>
-        <div class="faq-body"><p>Any trader who was a paying ATFunded customer. You'll need to show proof: an invoice or a dashboard screenshot with your name visible.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>What counts as proof?<span class="plus"></span></summary>
-        <div class="faq-body"><p>An ATFunded purchase invoice, or a screenshot of your ATFunded dashboard clearly showing your name. The name should match the one you enter on the form.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>How big is the discount?<span class="plus"></span></summary>
-        <div class="faq-body"><p>50% off your first TradersYard challenge, single-use, for verified ATFunded traders only.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>How fast are rewards?<span class="plus"></span></summary>
-        <div class="faq-body"><p>We pay rewards on demand and back it with our 48-hour guarantee. If a payout is late, you receive an extra 1% of your pool, up to $500.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>How long is the offer valid?<span class="plus"></span></summary>
-        <div class="faq-body"><p>This runs while seats last. We've opened 80 seats for ATFunded traders, so claim now: the code is single-use and expires.</p></div>
-      </details>
+    <div class="faq" style="margin-top:40px;">
+      <details class="faq-item"><summary>Who qualifies?<span class="plus"></span></summary><div class="faq-body"><p>Any trader who was a paying ATFunded customer. You'll need to show proof: an invoice or a dashboard screenshot with your name visible.</p></div></details>
+      <details class="faq-item"><summary>What counts as proof?<span class="plus"></span></summary><div class="faq-body"><p>An ATFunded purchase invoice, or a screenshot of your ATFunded dashboard clearly showing your name. The name should match the one you enter on the form.</p></div></details>
+      <details class="faq-item"><summary>How big is the discount?<span class="plus"></span></summary><div class="faq-body"><p>50% off your first TradersYard challenge, single-use, for verified ATFunded traders only.</p></div></details>
+      <details class="faq-item"><summary>How fast are rewards?<span class="plus"></span></summary><div class="faq-body"><p>We pay rewards on demand and back it with our 48-hour guarantee. If a payout is late, you receive an extra 1% of your pool, up to $500.</p></div></details>
+      <details class="faq-item"><summary>How long is the offer valid?<span class="plus"></span></summary><div class="faq-body"><p>This runs while seats last. We've opened 80 seats for ATFunded traders, so claim now: the code is single-use and expires.</p></div></details>
     </div>
   </div>
 </section>
 
-<!-- ===== Footer (mirrors TY Footer.vue) ===== -->
+<!-- Footer -->
 <footer class="site">
   <div class="container">
     <div class="foot-top">
       <div class="foot-brand">
         <a href="https://tradersyard.com" aria-label="TradersYard">
-          <svg class="ty-logo" width="128" height="24" viewBox="0 0 132 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M42.2081 2.94288C43.4382 2.96398 44.6685 2.96045 45.8985 2.93227C45.9399 4.52848 45.9035 6.28824 45.9037 7.89487L45.9089 17.6072L42.1911 17.6032C42.1998 16.6953 42.1796 15.9738 42.3289 15.074C41.0821 17.1779 39.8258 18.0161 37.303 17.6424C35.807 17.3076 34.8968 16.6478 34.3329 15.7236C32.9255 13.4516 33.0276 8.43851 35.551 6.96163C36.9058 6.16873 39.0971 6.04147 40.5171 6.76162C41.4191 7.21909 41.8828 7.98099 42.3834 8.80051C42.1438 6.96869 42.1903 4.81111 42.2081 2.94288Z"/>
-            <path d="M7.96558 2.97509C8.04635 2.9555 8.74814 2.93648 8.87742 2.93167C8.885 4.15791 8.84977 5.37119 8.88928 6.60073C9.8095 6.62641 10.8019 6.59324 11.7269 6.57406C11.7263 7.55862 11.714 8.56035 11.7671 9.54222C10.4056 9.52544 7.68236 9.22164 6.65553 10.1763C5.78314 10.9873 5.85855 13.0622 6.69398 13.9007C7.74299 14.9535 10.1668 14.635 11.5784 14.6475C11.6308 15.4449 11.594 16.7938 11.5934 17.6395C10.9722 17.5846 10.1474 17.6032 9.50724 17.6023C8.32861 17.6042 7.44842 17.6652 6.20687 17.4332C2.71937 16.7815 1.29416 11.7956 4.40273 9.80232C4.59879 9.67661 4.93041 9.63199 5.18559 9.47872C5.02209 9.36452 4.55462 9.52579 4.29986 9.52748C3.71385 9.53138 3.12191 9.53965 2.53616 9.55377L2.53418 6.59925C3.49343 6.59368 4.45271 6.60111 5.41175 6.62158C5.39201 4.54631 5.52857 3.23831 7.96558 2.97509Z"/>
-          </svg>
+          <img class="ty-logo" src="assets/ty-logo-white.svg" alt="TradersYard" width="132" height="24" />
         </a>
         <div class="app-btns">
           <a class="app-btn" href="https://apps.apple.com/at/app/tradersyard/id1580424931?l=en-GB" target="_blank" rel="noopener">
@@ -383,7 +364,7 @@
           </a>
         </div>
         <div class="socials">
-          <a href="https://twitter.com/TradersYard" target="_blank" rel="noopener" aria-label="X" style="color:#000;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.6h3.7l-8 9.1L24 22.4h-7.4l-5.8-7.6-6.6 7.6H.5l8.5-9.8L0 1.6h7.6l5.2 6.9 6.1-6.9zm-1.3 18.6h2L6.5 3.7H4.4l13.2 16.5z"/></svg></a>
+          <a href="https://twitter.com/TradersYard" target="_blank" rel="noopener" aria-label="X" style="color:#fff;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 1.6h3.7l-8 9.1L24 22.4h-7.4l-5.8-7.6-6.6 7.6H.5l8.5-9.8L0 1.6h7.6l5.2 6.9 6.1-6.9zm-1.3 18.6h2L6.5 3.7H4.4l13.2 16.5z"/></svg></a>
           <a href="https://discord.gg/2j2zYnTHYp" target="_blank" rel="noopener" aria-label="Discord" style="color:#5865F2;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5c1.6.4 2.6 1 3.6 1.6a13.6 13.6 0 0 0-11.6 0c1-.6 2.1-1.2 3.6-1.6L10.6 3a19.8 19.8 0 0 0-5 1.4C2.5 9 1.7 13.4 2.1 17.8a20 20 0 0 0 6 3l.5-.8c-.8-.3-1.6-.7-2.3-1.2l.6-.4a14.2 14.2 0 0 0 12.2 0l.6.4c-.7.5-1.5.9-2.3 1.2l.5.8a20 20 0 0 0 6-3c.5-5-.8-9.4-3.5-13.4zM8.5 15.3c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm7 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg></a>
           <a href="https://www.instagram.com/tradersyard/" target="_blank" rel="noopener" aria-label="Instagram" style="color:#E4405F;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.6c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 8.5 2.6 8.9 2.6 12s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zM12 6.9a5.1 5.1 0 1 0 0 10.2 5.1 5.1 0 0 0 0-10.2zm0 8.4a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6zm5.3-8.6a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
           <a href="https://www.facebook.com/tradersyard.int" target="_blank" rel="noopener" aria-label="Facebook" style="color:#1877F2;"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7v-3.5h3.1V9.4c0-3 1.8-4.7 4.6-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg></a>
@@ -425,22 +406,10 @@
     </div>
 
     <div class="disclaimers">
-      <div>
-        <h5>Campaign Disclosure</h5>
-        <p>This offer is independent and not affiliated with, endorsed by, or sponsored by ATFunded. All trademarks belong to their respective owners. The discount applies to one purchase per verified customer and is subject to verification and availability.</p>
-      </div>
-      <div>
-        <h5>General Disclosure</h5>
-        <p>The materials and content provided by TradersYard GmbH are intended solely for general informational purposes. This content does not constitute investment advice, an offer to buy or sell securities, or an endorsement of any financial instruments. TradersYard GmbH, registered at Kärntnerring 5-7, 1010 Vienna, Austria, adheres to all relevant European and international legal standards.</p>
-      </div>
-      <div>
-        <h5>Risk Disclosure</h5>
-        <p>Engaging in futures, forex, and other financial trading involves significant risk and is not appropriate for all investors. It is possible to lose the entire amount of your investment, or even more. Only use risk capital, money you can afford to lose without impacting your financial security or lifestyle. Past trading results do not guarantee future performance.</p>
-      </div>
-      <div>
-        <h5>Hypothetical Performance Disclosure</h5>
-        <p>Performance results based on hypothetical data have many inherent limitations and should not be relied upon as indicative of actual future performance. Hypothetical performance figures are often generated with the benefit of hindsight and do not involve financial risk, thus differing significantly from actual trading results.</p>
-      </div>
+      <div><h5>Campaign Disclosure</h5><p>This offer is independent and not affiliated with, endorsed by, or sponsored by ATFunded. All trademarks belong to their respective owners. The discount applies to one purchase per verified customer and is subject to verification and availability.</p></div>
+      <div><h5>General Disclosure</h5><p>The materials and content provided by TradersYard GmbH are intended solely for general informational purposes. This content does not constitute investment advice, an offer to buy or sell securities, or an endorsement of any financial instruments. TradersYard GmbH, registered at Kärntnerring 5-7, 1010 Vienna, Austria, adheres to all relevant European and international legal standards.</p></div>
+      <div><h5>Risk Disclosure</h5><p>Engaging in futures, forex, and other financial trading involves significant risk and is not appropriate for all investors. It is possible to lose the entire amount of your investment, or even more. Only use risk capital, money you can afford to lose without impacting your financial security or lifestyle. Past trading results do not guarantee future performance.</p></div>
+      <div><h5>Hypothetical Performance Disclosure</h5><p>Performance results based on hypothetical data have many inherent limitations and should not be relied upon as indicative of actual future performance. Hypothetical performance figures are often generated with the benefit of hindsight and do not involve financial risk, thus differing significantly from actual trading results.</p></div>
     </div>
 
     <div class="copyright">© 2026 TradersYard. All rights reserved.</div>

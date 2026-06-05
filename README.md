@@ -3,8 +3,8 @@
 Landing page for the TradersYard win-back campaign targeting displaced ATFunded traders. Offers 50% off the first challenge to verified ATFunded customers, gated behind a Google Form (proof of account required).
 
 ## Pages
-- **`index-v2.html`** — primary page. Dark theme, matches the current tradersyard.com identity.
-- **`index.html`** — V1, light theme (alternate).
+- **`index.html`** — primary page. Dark theme, matches the current tradersyard.com identity. This is the deployable entry page.
+- **`index-light.html`** — alternate light theme version.
 
 Both reuse the real TradersYard nav and footer, brand colour `#4250EB`, Satoshi/Clash Display type, and link the claim CTA to the campaign Google Form.
 
@@ -14,4 +14,4 @@ Both reuse the real TradersYard nav and footer, brand colour `#4250EB`, Satoshi/
 - `assets/favicon.ico`
 
 ## Deploy
-Static site. Serve any HTML file directly, or point a host (Vercel/Netlify/GitHub Pages) at the repo. Set `index-v2.html` as the entry page.
+Static site. Serve `index.html` directly, or point a host (Vercel/Netlify/GitHub Pages) at the repo root.
