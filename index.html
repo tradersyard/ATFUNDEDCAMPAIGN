@@ -27,7 +27,7 @@
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior:smooth; }
-  body { font-family:"Satoshi","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--black); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; }
+  body { font-family:"Satoshi","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--black); color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   h1,h2,h3,h4 { font-family:"Satoshi","Clash Display",system-ui,sans-serif; font-weight:700; letter-spacing:-0.02em; line-height:1.05; }
   a { text-decoration:none; }
   .container { max-width:1280px; margin:0 auto; padding:0 24px; }
@@ -40,7 +40,7 @@
 
   /* ===== Nav ===== */
   header.nav { padding:14px 0; position:sticky; top:0; z-index:50; background:rgba(0,0,0,.7); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
-  .nav-row { display:flex; align-items:center; justify-content:center; height:54px; }
+  .nav-row { display:flex; align-items:center; justify-content:flex-start; height:54px; }
   .ty-logo-wrap { display:inline-flex; }
 
   /* ===== Buttons (TY style: text slides, arrow reveals) ===== */
@@ -170,6 +170,64 @@
   .copyright { padding-top:28px; border-top:1px solid var(--line); text-align:center; font-size:13px; color:var(--muted-2); }
 
   .ty-logo { display:block; height:24px; width:auto; }
+
+  /* ===== Mobile optimization ===== */
+  @media (max-width:600px) {
+    .container { padding:0 16px; }
+    .promo-track span { font-size:11px; margin:0 18px; letter-spacing:.5px; }
+
+    /* Hero: scale heading so long words never overflow */
+    .hero { padding:40px 0 40px; }
+    .hero-inner { border-radius:28px; padding:40px 20px; }
+    .hero h1 { font-size:32px; line-height:1.1; margin-bottom:16px; word-break:break-word; hyphens:auto; }
+    .hero p.lead { font-size:16px; margin-bottom:26px; }
+    .chip { font-size:10px; letter-spacing:1px; padding:6px 14px; margin-bottom:18px; }
+
+    /* CTAs stack full-width and are easy thumb targets */
+    .hero-cta { flex-direction:column; gap:12px; width:100%; }
+    .hero-cta .btn { width:100%; justify-content:center; }
+    .btn { font-size:16px; padding:15px 22px; }
+
+    /* Sections breathe less on small screens */
+    section.block { padding:48px 0; }
+    h2.title { font-size:28px; }
+    .sub { font-size:16px; margin-bottom:36px; }
+
+    /* Panels: tighter padding + radius */
+    .blue-panel { padding:32px 22px; border-radius:24px; }
+    .blue-panel h2 { font-size:26px; }
+    .blue-panel p { font-size:16px; }
+    .prize-card, .seats-card { padding:26px 22px; }
+    .seats-big { font-size:56px; }
+
+    .strip-item { padding:26px 20px; }
+    .strip-item .num { font-size:28px; }
+
+    .card { padding:26px 22px; border-radius:18px; }
+    .card h3 { font-size:19px; }
+    .step { padding:26px 22px; }
+
+    /* CTA band */
+    .cta-band { padding:44px 22px; border-radius:24px; }
+    .cta-band h2 { font-size:28px; }
+    .cta-band p { font-size:16px; }
+    .cta-band .btn { width:100%; justify-content:center; }
+
+    /* FAQ: comfortable tap rows */
+    .faq-item summary { font-size:16px; padding:18px 18px; }
+    .faq-item .faq-body { padding:0 18px 18px; }
+
+    /* Footer */
+    footer.site { margin:0 8px; border-radius:20px 20px 0 0; }
+    footer.site .container { padding:48px 20px 40px; }
+    .foot-cols { grid-template-columns:1fr 1fr; gap:24px; }
+    .socials { gap:18px; }
+  }
+
+  @media (max-width:380px) {
+    .hero h1 { font-size:29px; }
+    .foot-cols { grid-template-columns:1fr; }
+  }
 </style>
 </head>
 <body>
