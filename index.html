@@ -40,18 +40,8 @@
 
   /* ===== Nav ===== */
   header.nav { padding:14px 0; position:sticky; top:0; z-index:50; background:rgba(0,0,0,.7); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
-  .nav-row { display:flex; align-items:center; justify-content:space-between; height:54px; gap:16px; }
-  .nav-left { display:flex; align-items:center; gap:22px; }
-  .locale { display:flex; align-items:center; gap:6px; font-size:14px; color:var(--muted); }
-  .locale img { width:18px; height:18px; border-radius:3px; }
-  .nav-center { flex:1; display:flex; justify-content:center; }
-  .nav-menu { display:flex; align-items:center; gap:4px; background:rgba(66,80,235,.14); border-radius:14px; padding:6px; }
-  .nav-menu a { font-size:14px; font-weight:500; color:#c7c7d2; padding:9px 15px; border-radius:10px; transition:all .2s; }
-  .nav-menu a:hover { background:rgba(255,255,255,.06); color:#fff; }
-  .nav-right { display:flex; align-items:center; gap:14px; }
-  .btn-nav { background:var(--n800); border:1px solid var(--n700); color:#fff; font-weight:600; font-size:14px; padding:10px 22px; border-radius:11px; transition:background .2s; }
-  .btn-nav:hover { background:var(--n700); }
-  @media (max-width:1024px){ .nav-center{display:none} .locale{display:none} }
+  .nav-row { display:flex; align-items:center; justify-content:center; height:54px; }
+  .ty-logo-wrap { display:inline-flex; }
 
   /* ===== Buttons (TY style: text slides, arrow reveals) ===== */
   .btn { display:inline-flex; align-items:center; gap:8px; font-family:"Satoshi","Clash Display",sans-serif; font-weight:500; font-size:17px; padding:15px 30px; border-radius:14px; border:1px solid transparent; transition:all .3s; cursor:pointer; }
@@ -199,25 +189,9 @@
 <!-- Nav -->
 <header class="nav">
   <div class="container nav-row">
-    <div class="nav-left">
-      <a href="https://tradersyard.com" aria-label="TradersYard">
-        <img class="ty-logo" src="assets/ty-logo-white.svg" alt="TradersYard" width="132" height="24" />
-      </a>
-      <div class="locale"><img src="https://tradersyard.com/landing/flags/en.svg" alt="en" /> English</div>
-    </div>
-    <div class="nav-center">
-      <nav class="nav-menu">
-        <a href="https://tradersyard.com/">FX</a>
-        <a href="https://tradersyard.com/futures">Futures</a>
-        <a href="https://tradersyard.com/challenges">Challenges</a>
-        <a href="https://tradersyard.com/arena">Tournaments</a>
-        <a href="https://tradersyard.com/about">About</a>
-        <a href="https://tradersyard.com/affiliate-program">Affiliate</a>
-      </nav>
-    </div>
-    <div class="nav-right">
-      <a href="https://tradersyard.com/auth/login" class="btn-nav">Sign In</a>
-    </div>
+    <span class="ty-logo-wrap" aria-label="TradersYard">
+      <img class="ty-logo" src="assets/ty-logo-white.svg" alt="TradersYard" width="132" height="24" />
+    </span>
   </div>
 </header>
 
@@ -242,7 +216,7 @@
   <div class="container">
     <div class="strip-item"><div class="num">25K+</div><div class="lbl">Traders trust us</div></div>
     <div class="strip-item"><div class="num">$350K+</div><div class="lbl">Total rewards paid</div></div>
-    <div class="strip-item"><div class="num">8 Hours</div><div class="lbl">Average reward time</div></div>
+    <div class="strip-item"><div class="num">15-30</div><div class="lbl">Day reward cycle</div></div>
   </div>
 </div>
 
@@ -254,7 +228,7 @@
         <div>
           <div class="eyebrow">The offer</div>
           <h2>We've opened 80 seats for ATFunded traders</h2>
-          <p>Half-price entry, real simulated capital up to $300,000, and rewards paid on demand. A limited release for displaced ATFunded traders, claimed once each, while seats last.</p>
+          <p>Half-price entry, real simulated capital up to $300,000, and a clear 15 to 30 day reward cycle. A limited release for displaced ATFunded traders, claimed once each, while seats last.</p>
         </div>
         <div class="seats-card">
           <div class="seats-big">80</div>
@@ -281,8 +255,8 @@
     <div class="grid3">
       <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></div>
-        <h3>Rewards on demand</h3>
-        <p>Withdraw on your schedule. If a payout takes over 48 business hours, you get an extra 1% of your pool, up to $500.</p>
+        <h3>A clear reward cycle</h3>
+        <p>Know exactly when you get paid. Rewards run on a steady 15 to 30 day cycle, no guesswork, no moving goalposts.</p>
       </div>
       <div class="card">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg></div>
@@ -339,7 +313,7 @@
       <details class="faq-item"><summary>Who qualifies?<span class="plus"></span></summary><div class="faq-body"><p>Any trader who was a paying ATFunded customer. You'll need to show proof: an invoice or a dashboard screenshot with your name visible.</p></div></details>
       <details class="faq-item"><summary>What counts as proof?<span class="plus"></span></summary><div class="faq-body"><p>An ATFunded purchase invoice, or a screenshot of your ATFunded dashboard clearly showing your name. The name should match the one you enter on the form.</p></div></details>
       <details class="faq-item"><summary>How big is the discount?<span class="plus"></span></summary><div class="faq-body"><p>50% off your first TradersYard challenge, single-use, for verified ATFunded traders only.</p></div></details>
-      <details class="faq-item"><summary>How fast are rewards?<span class="plus"></span></summary><div class="faq-body"><p>We pay rewards on demand and back it with our 48-hour guarantee. If a payout is late, you receive an extra 1% of your pool, up to $500.</p></div></details>
+      <details class="faq-item"><summary>How does the reward cycle work?<span class="plus"></span></summary><div class="faq-body"><p>Rewards run on a clear 15 to 30 day cycle, so you always know when your next reward window is. No moving goalposts.</p></div></details>
       <details class="faq-item"><summary>How long is the offer valid?<span class="plus"></span></summary><div class="faq-body"><p>This runs while seats last. We've opened 80 seats for ATFunded traders, so claim now: the code is single-use and expires.</p></div></details>
     </div>
   </div>
